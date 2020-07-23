@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/kbvLocation">
+        </com.flaviofaria.kenburnsview.KenBurnsView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_star_rating"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp" >
+            
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/app_name"
+                android:src = "@drawable/ic_baseline_star_24"
+                android:tint = "#FFFFFF">
+            </ImageView>
+            
+            <TextView
+                android:id="@+id/text_star_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:textSize="15dp"
+                android:textColor="#FFFFFF">
+
+            </TextView>
+            
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#D6000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_title">
+        </View>
+
+        <ImageView
+            app:layout_constraintBottom_toBottomOf="@id/text_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_location"
+            android:id="@+id/image_location"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+           android:layout_marginStart="20dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_baseline_location_on_24"
+            android:tint="#FFFFFF"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_location"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_location"
+            />
+
+        <TextView
+            app:layout_constraintBottom_toTopOf="@id/image_location"
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2dp"
+            android:paddingTop="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+
+        
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
